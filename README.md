@@ -26,6 +26,7 @@
 		- app: This can be anything based on your file name and Flask app name 
 		- runtime: This could be any version of Python in which your application is written in
 		- region: The AWS region in which your Lambda function needs to get created.
+		- check validate YAML: 'https://codebeautify.org/yaml-validator'
  	3. run one command to deploy this to Lambda: 'sls deploy'
 
 9. CircleCI:
