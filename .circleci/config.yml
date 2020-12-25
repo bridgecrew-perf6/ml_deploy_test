@@ -31,4 +31,9 @@ jobs:
           key: dependencies-node-{{ checksum "package.json" }}
       - run:
           name: Deploy application
-          command: sls deploy -v
+
+workflows:
+  version: 2
+  test-all:
+    jobs:
+      - ml_deploy_test
