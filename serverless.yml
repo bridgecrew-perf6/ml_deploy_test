@@ -15,7 +15,7 @@ custom:
     dockerizePip: non-linux
 provider:
   name: aws
-  runtime: python3.7
+  runtime: python3.7 
   stage: dev
   region: us-east-2
 functions:
