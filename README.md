@@ -2,7 +2,6 @@
 
 #### the tools which will be using:
 - Python 3.6 or above (the best language ever!)
-- Pip (duh!)
 - Flask 1.1.2
 - NodeJS 12.X (For Serverless Framework)
 - Serverless Framework
