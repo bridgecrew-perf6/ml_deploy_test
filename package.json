@@ -1,0 +1,15 @@
+{
+  "name": "flask_aws_lambda",
+  "version": "1.0.0",
+  "description": "- Python 3.6 or above (the best language ever!)\r - Pip (duh!)\r - Flask 1.1.2\r - NodeJS 12.X (For Serverless Framework)\r - Serverless Framework\r - AWS CLI\r - Circle-CI\r - AWS Lambda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "msh",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-python-requirements": "^5.1.0",
+    "serverless-wsgi": "^1.7.6"
+  }
+}
