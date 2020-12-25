@@ -18,7 +18,7 @@
 4. pip install -r requirements.txt
 5. set up AWS provider credentials: `http://slss.io/aws-creds-setup`
 5. AWS CLI installing and configuring: `https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html`
-	- Run on local `serverless config credentials --provider aws --key <AWS Access Key ID> --secret <AWS Secret Access Key>`
+	- Run on local to configure the default AWS profile: `serverless config credentials --provider aws --key <AWS Access Key ID> --secret <AWS Secret Access Key>`
 6. npm init
 7. npm install -g serverless
 8. deploy theserverless app in Lambda:
