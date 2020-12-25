@@ -1,36 +1,37 @@
 version: 2
 jobs:
-  deploy:
-    working_dir: ~/python-ci
-    docker: 
-      - image: circleci/python:3.7.3
-    steps: 
-      - checkout
-      - restore_cache:
-          keys:
-            - dependencies-node-{{ checksum "package.json" }}
-            - dependencies-node
-      - run:
-          name: Install python dependencies
-          command: |
-            sudo pip install -r requirements.txt
-      - run:
-          name: Install node and npm
-          command: |
-            curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-            sudo apt-get install -y nodejs
-            node --version && npm -v
-      - run: 
-          name: Install Serverless CLI and dependencies
-          command: | 
-            sudo npm i -g serverless
-            npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: dependencies-node-{{ checksum "package.json" }}
-      - run:
-          name: Deploy application
+  ml_deploy_test:
+   deploy:
+     working_dir: ~/python-ci
+     docker: 
+       - image: circleci/python:3.7.3
+     steps: 
+       - checkout
+       - restore_cache:
+           keys:
+             - dependencies-node-{{ checksum "package.json" }}
+             - dependencies-node
+       - run:
+           name: Install python dependencies
+           command: |
+             sudo pip install -r requirements.txt
+       - run:
+           name: Install node and npm
+           command: |
+             curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+             sudo apt-get install -y nodejs
+             node --version && npm -v
+       - run: 
+           name: Install Serverless CLI and dependencies
+           command: | 
+             sudo npm i -g serverless
+             npm install
+       - save_cache:
+           paths:
+             - node_modules
+           key: dependencies-node-{{ checksum "package.json" }}
+       - run:
+           name: Deploy application
 
 workflows:
   version: 2
