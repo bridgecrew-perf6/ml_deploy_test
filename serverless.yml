@@ -14,7 +14,7 @@ custom:
   pythonRequirements:
     dockerizePip: non-linux
 provider:
-  name: aws
+  name: aws 
   runtime: python3.7 
   stage: dev
   region: us-east-2
@@ -25,3 +25,5 @@ functions:
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
+
+      
