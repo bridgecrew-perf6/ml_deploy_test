@@ -18,6 +18,7 @@ provider:
   runtime: python3.7 
   stage: dev
   region: us-east-2
+  profile: default
 functions:
   app:
     handler: wsgi.handler
